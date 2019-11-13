@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>PyMart Scatter Plots</title>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+	<script src="https://d3js.org/d3.v4.min.js"></script>
+	<script src="https://MomentJS.com/downloads/moment.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
+  <script src="../projectofinal/table/data.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/cerulean/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <link rel="stylesheet" href="../projectofinal/table/style.css">
+  <nav class="navbar navbar-default">
+		<div class="container-fluid">
+		  <div class="navbar-header">
+			<a class="navbar-brand" href="../projectofinal/table/index.html">Search Engine for Data
+			  <img class="nav-ufo" src="../projectofinal/table/Pymark.jpg">
+			</a>
+		  </div>
+			<div class="navbar-header">
+			<a class="navbar-brand" href="index.html"> Scatter Plots
+  
+			</a>
+		  </div>
+			<div class="navbar-header">
+			<a class="navbar-brand" href="model.html">Linear Regression Model
+  
+			</a>
+		  </div>
+		</div>
+	  </nav>
+</head>
+<body>
+
+  <p>
+	<select id="oferta1" onchange="this.value" >
+		<option disable="" value="">Branch</option>
+		<option value="ACAPULCO">ACAPULCO</option>
+		<option value="ACAPULCO DIAMANTE">ACAPULCO DIAMANTE</option>
+		<option value="AEROPUERTO">AEROPUERTO</option>
+		<option value="AGUASCALIENTES">AGUASCALIENTES</option>
+		<option value="ANGELOPOLIS">ANGELOPOLIS</option>
+		<option value="AV JESUS DEL MONTE">AV JESUS DEL MONTE</option>
+		<option value="AVILA CAMACHO">AVILA CAMACHO</option>
+		<option value="AZCAPOTZALCO">AZCAPOTZALCO</option>
+		<option value="BAHIA DE BANDERAS">BAHIA DE BANDERAS</option>
+		<option value="BALBUENA">BALBUENA</option>
+		<option value="BELISARIO DOMINGUEZ">BELISARIO DOMINGUEZ</option>
+		<option value="BLVD. MORELOS">BLVD. MORELOS</option>
+		<option value="BUENAVISTA">BUENAVISTA</option>
+		<option value="CAMPECHE">CAMPECHE</option>
+		<option value="CARRETERA 57">CARRETERA 57</option>
+		<option value="CD OBREGON">CD OBREGON</option>
+		<option value="CD. JARDIN">CD. JARDIN</option>
+		<option value="CHAPALA">CHAPALA</option>
+		<option value="CIUDAD JUAREZ">CIUDAD JUAREZ</option>
+		<option value="COLA DE BALLENA">COLA DE BALLENA</option>
+		<option value="COLIMA NORTE">COLIMA NORTE</option>
+		<option value="CORDOBA">CORDOBA</option>
+		<option value="CUAJIMALPA">CUAJIMALPA</option>
+		<option value="CUITLAHUAC">CUITLAHUAC</option>
+		<option value="CULIACAN">CULIACAN</option>
+		<option value="DOMINGO DIEZ">DOMINGO DIEZ</option>
+		<option value="DURANGO">DURANGO</option>
+		<option value="ECHEGARAY">ECHEGARAY</option>
+		<option value="EDUARDO MOLINA">EDUARDO MOLINA</option>
+		<option value="EJERCITO MEXICANO">EJERCITO MEXICANO</option>
+		<option value="ENSENADA">ENSENADA</option>
+		<option value="ESPACIO ESMERALDA">ESPACIO ESMERALDA</option>
+		<option value="FELIX CUEVAS">FELIX CUEVAS</option>
+		<option value="GALERIAS DEL VALLE (PROGRESO)">GALERIAS DEL VALLE (PROGRESO)</option>
+		<option value="GALERIAS LAS TORRES">GALERIAS LAS TORRES</option>
+		<option value="GALERIAS SALTILLO">GALERIAS SALTILLO</option>
+		<option value="GOMEZ MORIN">GOMEZ MORIN</option>
+		<option value="GUAYMAS">GUAYMAS</option>
+		<option value="HIPERPLAZA TEXCOCO">HIPERPLAZA TEXCOCO</option>
+		<option value="INTERLOMAS">INTERLOMAS</option>
+		<option value="IRAPUATO">IRAPUATO</option>
+		<option value="IRRIGACION">IRRIGACION</option>
+		<option value="IXTAPALUCA">IXTAPALUCA</option>
+		<option value="JARDINES DEL SOL">JARDINES DEL SOL</option>
+		<option value="LA CRUZ">LA CRUZ</option>
+		<option value="LA FE">LA FE</option>
+		<option value="LA HUASTECA">LA HUASTECA</option>
+		<option value="LA PASTORA">LA PASTORA</option>
+		<option value="LABNA CANCUN I">LABNA CANCUN I</option>
+		<option value="LAS ADELITAS">LAS ADELITAS</option>
+		<option value="LAS AGUILAS">LAS AGUILAS</option>
+		<option value="LAS AMERICAS">LAS AMERICAS</option>
+		<option value="LAS ANIMAS">LAS ANIMAS</option>
+		<option value="LAS ANTENAS">LAS ANTENAS</option>
+		<option value="LAS TORRES">LAS TORRES</option>
+		<option value="LOMAS">LOMAS</option>
+		<option value="LOMAS VERDES">LOMAS VERDES</option>
+		<option value="LOPEZ MATEOS">LOPEZ MATEOS</option>
+		<option value="LOS CABOS">LOS CABOS</option>
+		<option value="LOS MOCHIS">LOS MOCHIS</option>
+		<option value="Lago de Guadalupe">Lago de Guadalupe</option>
+		<option value="MANZANILLO">MANZANILLO</option>
+		<option value="MERIDA NORTE">MERIDA NORTE</option>
+		<option value="MERIDA PENSIONES">MERIDA PENSIONES</option>
+		<option value="METEPEC">METEPEC</option>
+		<option value="MIGUEL ALEMAN">MIGUEL ALEMAN</option>
+		<option value="MIRAMONTES">MIRAMONTES</option>
+		<option value="MONCLOVA">MONCLOVA</option>
+		<option value="MORELIA">MORELIA</option>
+		<option value="NINO OBRERO">NINO OBRERO</option>
+		<option value="PACHUCA">PACHUCA</option>
+		<option value="PATIO SANTA FE">PATIO SANTA FE</option>
+		<option value="PATRIA">PATRIA</option>
+		<option value="PERIFERICO CUAUTITLAN">PERIFERICO CUAUTITLAN</option>
+		<option value="PERIFERICO SUR">PERIFERICO SUR</option>
+		<option value="PERINORTE">PERINORTE</option>
+		<option value="PIRULES">PIRULES</option>
+		<option value="PITILLAL">PITILLAL</option>
+		<option value="PLATEROS">PLATEROS</option>
+		<option value="PLAYA DEL CARMEN">PLAYA DEL CARMEN</option>
+		<option value="PLAZA ANA">PLAZA ANA</option>
+		<option value="PLAZA DE TOROS">PLAZA DE TOROS</option>
+		<option value="PLAZA ORIENTE">PLAZA ORIENTE</option>
+		<option value="PLAZA SAN PEDRO">PLAZA SAN PEDRO</option>
+		<option value="POLIGONO">POLIGONO</option>
+		<option value="QUERETARO">QUERETARO</option>
+		<option value="REFORMA">REFORMA</option>
+		<option value="REVOLUCION">REVOLUCION</option>
+		<option value="ROSARITO">ROSARITO</option>
+		<option value="SAN JOSE DEL CABO">SAN JOSE DEL CABO</option>
+		<option value="SAN LUIS POTOSI">SAN LUIS POTOSI</option>
+		<option value="SAN MANUEL">SAN MANUEL</option>
+		<option value="SAN NICOLAS">SAN NICOLAS</option>
+		<option value="SANTA ELENA">SANTA ELENA</option>
+		<option value="SANTA MARIA COACALCO">SANTA MARIA COACALCO</option>
+		<option value="SANTIN">SANTIN</option>
+		<option value="SATELITE">SATELITE</option>
+		<option value="SENDERO">SENDERO</option>
+		<option value="TAMPICO">TAMPICO</option>
+		<option value="TAXQUENA">TAXQUENA</option>
+		<option value="TEPEYAC">TEPEYAC</option>
+		<option value="TEPIC">TEPIC</option>
+		<option value="TIJUANA 2000">TIJUANA 2000</option>
+		<option value="TIJUANA HIPODROMO">TIJUANA HIPODROMO</option>
+		<option value="TLAHUAC">TLAHUAC</option>
+		<option value="TLALPAN">TLALPAN</option>
+		<option value="TONALA">TONALA</option>
+		<option value="TORREON">TORREON</option>
+		<option value="TORRES DE LINDA VISTA">TORRES DE LINDA VISTA</option>
+		<option value="TORRES LANDA">TORRES LANDA</option>
+		<option value="Tlaxcala Estadio">Tlaxcala Estadio</option>
+		<option value="UNIVERSIDAD">UNIVERSIDAD</option>
+		<option value="VALLARTA">VALLARTA</option>
+		<option value="VALLE ORIENTE">VALLE ORIENTE</option>
+		<option value="VERACRUZ">VERACRUZ</option>
+		<option value="XALAPA SUR">XALAPA SUR</option>
+		<option value="ZACATECAS">ZACATECAS</option>
+	</select>
+	<select id="oferta2" onchange="this.value" >
+		<option disable="" value="">Shift</option>
+		<option value='0'>0:00-7:59</option>
+		<option value='8'>8:00-15:59</option>
+		<option value='16'>16:00-11:59</option>
+	</select>
+	<select id="oferta3" onchange="this.value" >
+		<option disable="" value="">KMeans</option>
+		<option value='1'>KMeans Center 4.49936304</option>
+		<option value='0'>KMeans Center 4.62975351</option>
+		<option value='2'>KMeans Center 4.74211998</option>
+		<option value='3'>KMeans Center 5.24920714</option>
+	</select>
+    <select id="respuesta1" onchange="this.value" >
+	<option disable="real_employee" value="real_employee">real_employee</option>
+        <option value="fcst_employee">fcst_employee</option>
+        <option value="real_employee">real_employee</option>
+   </select>
+
+    <select id="respuesta2" onchange="this.value" >
+	<option disable="fcst_employee" value="fcst_employee">fcst_employee</option>
+        <option value="fcst_employee">fcst_employee</option>
+        <option value="real_employee">real_employee</option>
+    </select>
+ 
+
+
+
+    <button name="App" value="submit" onclick="updateInfo();" >Submit</button>
+  </p>
+
+
+
+  <div id="plot"></div>
+<div id="plot1"></div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.9.1/d3-tip.js"></script>
+
+  <script src="plots.js"></script>
+  <!--<iframe id="processor" src="index2.html" frameborder="0" allowfullscreen
+  style="position:absolute;top:70%;left:0;width:100%;height:100%;"></iframe>
+  <iframe id="processor" src="index3.html" frameborder="0" allowfullscreen
+  style="position:absolute;top:140%;left:0;width:100%;height:100%;"></iframe>-->
+</body>
+</html>

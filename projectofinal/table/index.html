@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="https://MomentJS.com/downloads/moment.js"></script>
+<head>
+  <meta charset="utf-8">
+  <title>PyMart Ltd.</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/cerulean/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="../table/index.html">Search Engine for Data
+            <img class="nav-ufo" src="Pymark.jpg">
+          </a>
+        </div>
+          <div class="navbar-header">
+          <a class="navbar-brand" href="../index.html"> Scatter Plots
+
+          </a>
+        </div>
+          <div class="navbar-header">
+          <a class="navbar-brand" href="../model.html">Linear Regression Model
+
+          </a>
+        </div>
+      </div>
+    </nav>
+    <div class="hero text-center">
+      <h1>PyMart Ltd.</h1>
+      <p>
+In Pymart is all about our customers.<br>
+That is, groceries in the right place at the right time.<br>
+Committed to delivering outstanding customer services and high quality products.<br>
+Pymart will allocate its employees efficiently since now on.<br>
+    </div>
+    <div class="container">
+      <div class="row margin-top-50">
+        <div class="col-md-2">
+          <aside class="filters">
+            <div class="panel panel-default">
+              <div class="panel-heading">Filter Search</div>
+              <div class="panel-body">
+                <form>
+                  <div class="form-group">
+                    <ul class="list-group" id="filters">
+                      <li class="filter list-group-item">
+                        <label for="date">Enter a Date</label>
+                        <input class="form-control" id="datetime" type="text" placeholder="01/11/2011">
+                        <label for="cities">Enter a Branch</label>
+                        <input class="form-control" id="branch" type="text" placeholder="UNIVERSIDAD">
+                        <label for="states">Enter a Shift</label>
+                        <input class="form-control" id="shift" type="text" placeholder="0 8 16">
+                        <label for="countries">Enter a Forecast</label>
+                        <input class="form-control" id="fcst_employee" type="text" placeholder="4.7968247515">
+                        <label for="shapes">Enter a Volume</label>
+                        <input class="form-control" id="volumen" type="text" placeholder="0 1 2 3">
+                      </li>
+                    </ul>
+                  </div>
+                  <button id="filter-btn" type="button" class="btn btn-default">Filter Table</button>
+                </form>
+              </div>
+            </div>
+          </aside>
+        </div>
+        <div class="col-md-10">
+          <div id="table-area" class="">
+            <table id="ufo-table" class="table table-striped">
+              <thead>
+                <tr>
+                  <th class="table-head">Datetime</th>
+                  <th class="table-head">Branch</th>
+                  <th class="table-head">Shift</th>
+                  <th class="table-head">Fcst_employee</th>
+                  <th class="table-head">Volume</th>
+                  <th class="table-head">Real_employee</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <span class="bottom">PyMart Headcount</span>
+    </footer>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>

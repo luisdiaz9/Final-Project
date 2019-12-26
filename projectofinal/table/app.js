@@ -12,7 +12,8 @@ data.forEach((info) => {
     var cell = row.append("td");
 if( value > 1500000000000){
     cell.text(moment(value).format('DD/MM/YYYY'));}
-else {cell.text(value);}
+else if (!isNaN(value)) {cell.text(Math.round(value));}
+else{cell.text(value);}
   });
 });
 
@@ -46,13 +47,13 @@ button.on("click", function() {
     }
     //displayData(new_table3);    
     var dateInputText = d3.select("#fcst_employee");    
-    var new_table4 = new_table3.filter(info => info.fcst_employee===parseFloat(dateInputText.property("value")));
+    var new_table4 = new_table3.filter(info => Math.round(info.fcst_employee)===parseFloat(dateInputText.property("value")));
     if(Object.entries(new_table4).length===0 ){
       new_table4 = new_table3
     }
     //displayData(new_table4);
-    var dateInputText = d3.select("#volumen");
-    var new_table5 = new_table4.filter(info => info.volumen===parseFloat(dateInputText.property("value")));
+    var dateInputText = d3.select("#volume");
+    var new_table5 = new_table4.filter(info => info.volume===parseFloat(dateInputText.property("value")));
     if(Object.entries(new_table5).length===0 ){
       new_table5 = new_table4
     }

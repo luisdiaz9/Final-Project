@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<link rel="shortcut icon" href="../projectofinal/table/Pymark.jpg">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -16,8 +17,9 @@
   <nav class="navbar navbar-default">
 		<div class="container-fluid">
 		  <div class="navbar-header">
-			<a class="navbar-brand" href="../projectofinal/table/index.html">Search Engine for Data
-			  <img class="nav-ufo" src="../projectofinal/table/Pymark.jpg">
+			<a class="navbar-brand" href="../projectofinal/table/index.html">Search Engine for Data</a>
+			<a href="../../index.html">  
+			<img class="nav-ufo" src="../projectofinal/table/Pymark.jpg">
 			</a>
 		  </div>
 			<div class="navbar-header">
@@ -36,6 +38,16 @@
 <body>
 
   <p>
+		<div class="form-group">
+				<label for="inputName">Initial date</label>
+					<input type="date" class="form-control" id="inputFecha" name="petFecha" data-date-inline-picker="true" />
+		
+			<label for="inputName">End date</label>
+			<input type="date" class="form-control" id="outputFecha" name="petFecha" data-date-inline-picker="true" />
+	</div>
+
+
+
 	<select id="oferta1" onchange="this.value" >
 		<option disable="" value="">Branch</option>
 		<option value="ACAPULCO">ACAPULCO</option>
@@ -164,26 +176,83 @@
 	</select>
 	<select id="oferta3" onchange="this.value" >
 		<option disable="" value="">KMeans</option>
-		<option value='1'>KMeans Center 4.49936304</option>
-		<option value='0'>KMeans Center 4.62975351</option>
-		<option value='2'>KMeans Center 4.74211998</option>
-		<option value='3'>KMeans Center 5.24920714</option>
+		<option value='2'>KMeans Center 6.84381309</option>
+		<option value='0'>KMeans Center 15.5031781</option>
+		<option value='1'>KMeans Center 29.87418555</option>
+		<option value='3'>KMeans Center 58.24968631</option>
 	</select>
     <select id="respuesta1" onchange="this.value" >
 	<option disable="real_employee" value="real_employee">real_employee</option>
         <option value="fcst_employee">fcst_employee</option>
-        <option value="real_employee">real_employee</option>
+		<option value="real_employee">real_employee</option>
+		<option value="units">items</option>
+		<option value="mean">mean_items</option>
+		<option value="time">time</option>
+		<option value="mean_time">mean_time</option>
+		<option value="venta_neta">venta_neta</option>
    </select>
 
     <select id="respuesta2" onchange="this.value" >
 	<option disable="fcst_employee" value="fcst_employee">fcst_employee</option>
-        <option value="fcst_employee">fcst_employee</option>
-        <option value="real_employee">real_employee</option>
+	<option value="fcst_employee">fcst_employee</option>
+	<option value="real_employee">real_employee</option>
+	<option value="units">items</option>
+	<option value="mean">mean_items</option>
+	<option value="time">time</option>
+	<option value="mean_time">mean_time</option>
+	<option value="venta_neta">venta_neta</option>
     </select>
  
-
-
-
+	<select id="respuesta3" onchange="this.value" >
+		<option disable="units" value="units">items</option>
+        <option value="fcst_employee">fcst_employee</option>
+		<option value="real_employee">real_employee</option>
+		<option value="units">items</option>
+		<option value="mean">mean_items</option>
+		<option value="time">time</option>
+		<option value="mean_time">mean_time</option>
+		<option value="venta_neta">venta_neta</option>
+		</select>
+		<select id="respuesta4" onchange="this.value" >
+			<option disable="mean" value="mean">mean_items</option>
+			<option value="fcst_employee">fcst_employee</option>
+			<option value="real_employee">real_employee</option>
+			<option value="units">items</option>
+			<option value="mean">mean_items</option>
+			<option value="time">time</option>
+			<option value="mean_time">mean_time</option>
+			<option value="venta_neta">venta_neta</option>
+			</select>
+			<select id="respuesta5" onchange="this.value" >
+				<option disable="time" value="time">time</option>
+				<option value="fcst_employee">fcst_employee</option>
+				<option value="real_employee">real_employee</option>
+				<option value="units">items</option>
+				<option value="mean">mean_items</option>
+				<option value="time">time</option>
+				<option value="mean_time">mean_time</option>
+				<option value="venta_neta">venta_neta</option>
+				</select>
+				<select id="respuesta6" onchange="this.value" >
+					<option disable="mean_time" value="mean_time">mean_time</option>
+					<option value="fcst_employee">fcst_employee</option>
+					<option value="real_employee">real_employee</option>
+					<option value="units">items</option>
+					<option value="mean">mean_items</option>
+					<option value="time">time</option>
+					<option value="mean_time">mean_time</option>
+					<option value="venta_neta">venta_neta</option>
+					</select>
+					<select id="respuesta7" onchange="this.value" >
+						<option disable="venta_neta" value="venta_neta">venta_neta</option>
+						<option value="fcst_employee">fcst_employee</option>
+						<option value="real_employee">real_employee</option>
+						<option value="units">items</option>
+						<option value="mean">mean_items</option>
+						<option value="time">time</option>
+						<option value="mean_time">mean_time</option>
+						<option value="venta_neta">venta_neta</option>
+						</select>
     <button name="App" value="submit" onclick="updateInfo();" >Submit</button>
   </p>
 
@@ -191,6 +260,20 @@
 
   <div id="plot"></div>
 <div id="plot1"></div>
+<div id="plot2"></div>
+<div id="plot3"></div>
+<div id="plot4"></div>
+<div id="plot5"></div>
+<div id="plot6"></div>
+<div id="plot7"></div>
+<div id="plot8"></div>
+<div id="plot9"></div>
+<div id="plot10"></div>
+<div id="plot11"></div>
+<div id="plot12"></div>
+<div id="plot13"></div>
+<div id="plot14"></div>
+<div id="plot15"></div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.9.1/d3-tip.js"></script>
 

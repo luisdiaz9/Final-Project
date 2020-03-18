@@ -20,7 +20,7 @@ PlotlyScatterPlotShift8to16PercAcm.JPG<br>
 ![PlotlyScatterPlotShift8to16PercAcm](PlotlyScatterPlotShift8to16PercAcm.JPG)<br><br>
 PlotlyPieByStoresByStoresAndShifts<br>
 ![PlotlyPieByStores](PlotlyPieByStores.JPG)<br><br>
-StatisticsSalesByStoresAndShifts<br>
+StatisticsSalesByStores<br>
 ![StatisticsSales](StatisticsSales.jpg)<br><br>
 SearchEngineInclusive.JPG<br>
 ![SearchEngineInclusive](SearchEngineInclusive.JPG)<br><br>

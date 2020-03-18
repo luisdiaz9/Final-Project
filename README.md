@@ -8,9 +8,9 @@ In order to run the code, it is required:<br>
 * Google Chrome, Firefox or any other Internet Explorer<br>
 * Utilizes Python, JSON, JavaScript, Plotly, HTML and Sklearn<br>
 ### Screenshots
-Regression<br>
+Regression.JPG<br>
 ![Regression](Regression.JPG)<br><br>
-PlotlyScatterPlotShift8to16<br>
+PlotlyScatterPlotShift8to16.JPG<br>
 ![PlotlyScatterPlotShift8to16](PlotlyScatterPlotShift8to16.JPG)<br><br>
 PlotlyScatterPlotShift8to16Acm.JPG<br>
 ![PlotlyScatterPlotShift8to16Acm](PlotlyScatterPlotShift8to16Acm.JPG)<br><br>
@@ -18,9 +18,9 @@ PlotlyScatterPlotShift8to16Perc.JPG<br>
 ![PlotlyScatterPlotShift8to16Perc](PlotlyScatterPlotShift8to16Perc.JPG)<br><br>
 PlotlyScatterPlotShift8to16PercAcm.JPG<br>
 ![PlotlyScatterPlotShift8to16PercAcm](PlotlyScatterPlotShift8to16PercAcm.JPG)<br><br>
-PlotlyPieByStores.JPG<br>
+PlotlyPieByStoresByStoresAndShifts<br>
 ![PlotlyPieByStores](PlotlyPieByStores.JPG)<br><br>
-StatisticsSales.jpg<br>
+StatisticsSalesByStoresAndShifts<br>
 ![StatisticsSales](StatisticsSales.jpg)<br><br>
 SearchEngineInclusive.JPG<br>
 ![SearchEngineInclusive](SearchEngineInclusive.JPG)<br><br>
